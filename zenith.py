@@ -20,11 +20,11 @@ def talk(text):
 def greet_user():
     hour = int(datetime.datetime.now().hour)
     if hour < 12:
-        talk("Good Morning, how may I help you?")
+        talk("Good Morning " + zenithConfig.userName +", how may I help you?")
     elif hour < 18:
-        talk("Good Afternoon, how may I help you?")
+        talk("Good Afternoon " + zenithConfig.userName +", how may I help you?")
     else:
-        talk("Good Evening, how may I help you?")
+        talk("Good Evening "+ zenithConfig.userName +", how may I help you?")
 
 def textInput():
     return input("User: ").lower()
@@ -41,6 +41,8 @@ def zenithCommands(query):
     elif 'notify' in query:
         query = query.replace("notify", "")
         talk(ntfy.notifySort(query))
+    elif 'exit' in query:
+        exit()
     else:
         talk('Sorry, I dont recognize that command')
 
