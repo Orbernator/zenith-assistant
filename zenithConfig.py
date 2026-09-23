@@ -15,6 +15,8 @@ jellyfinURL = 'NULL'
 embyURL = 'NULL'
 # Plex URL, INCLUDE FULL LINK, AS WELL AS CONNECTION TYPE, eg https://
 plexURL = 'NULL'
+# Protected Text
+protectedTextURL = 'NULL'
 
 ## Controls And Disables
 sureBing = False

@@ -41,6 +41,8 @@ def zenithCommands(query):
     elif 'notify' in query:
         query = query.replace("notify", "")
         talk(ntfy.notifySort(query))
+    elif 'hello' or 'hi' or 'howdie' or 'hiya' in query:
+
     elif 'exit' in query:
         exit()
     else:

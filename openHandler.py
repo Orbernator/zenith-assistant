@@ -372,6 +372,17 @@ def openSort(query):
     elif 'meta quest store' or 'meta quest' in query:
         webbrowser.open_new_tab('https://meta.com/en-gb/experiences')
         return('Meta Quest Store Opened')
-    elif ''
+    elif 'patreon' in query:
+        webbrowser.open_new_tab('https://www.patreon.com/')
+        return('Patreon Opened')
+    elif 'amazon' in query:
+        webbrowser.open_new_tab('https://amazon.com')
+        return('Amazon Opened')
+    elif 'grokipedia' in query:
+        webbrowser.open_new_tab('https://grokipedia.com')
+        return('Grokipedia Opened')
+    elif 'protected text' in query:
+        webbrowser.open_new_tab('https://protectedtext.com/' + zenithConfig.protextedTextURL)
+        return('Protected Text Opened')
     else:
         return('Command not Found')
