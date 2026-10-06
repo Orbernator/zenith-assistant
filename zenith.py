@@ -4,6 +4,7 @@ import datetime
 import zenithConfig
 import searchHandler as srch
 import openHandler as opn
+import phrasesHandler as phr
 import notifyHandler as ntfy
 ## Zenith Assistant
 ## Created by Team Orbi | 2026
@@ -42,8 +43,13 @@ def zenithCommands(query):
         query = query.replace("notify", "")
         talk(ntfy.notifySort(query))
     elif 'hello' or 'hi' or 'howdie' or 'hiya' in query:
-
-    elif 'exit' in query:
+        phr.greetings()
+    elif 'goodbye' or 'bye' or 'see ya' or 'see you' or 'adios' or 'ciao' in query:
+        phr.goodbyes()
+        exit()
+    elif 'weather' or 'forecast' or 'whats it going to be today' or 'whats the weather' or 'whats the forecast' or 'add weather related thing here' in query:
+        srch.weather()
+    elif 'exit' or 'quit' or 'terminate' or 'end task' in query:
         exit()
     else:
         talk('Sorry, I dont recognize that command')

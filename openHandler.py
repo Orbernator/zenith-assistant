@@ -1,4 +1,4 @@
-import webbrowser
+in import webbrowser
 import zenithConfig
 def openSort(query):
     if 'youtube' in query:

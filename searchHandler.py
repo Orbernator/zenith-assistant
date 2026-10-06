@@ -1,4 +1,6 @@
 import wikipediaapi
+import python-weather
+import asyncio
 from wikipediaapi._wikipedia import wikipedia
 
 import zenithConfig
@@ -12,3 +14,7 @@ def sortSearch(query):
         if zenithConfig.searchEngine == 'google':
             print('Search not yet implemented')
         return None
+
+def weather():
+    location = zenithConfig.usrLocation
+    async def main() -> none

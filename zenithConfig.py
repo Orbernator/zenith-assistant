@@ -8,7 +8,7 @@ searchEngine = 'google'
 ## Keys and URLS
 
 # ntfy.sh | ONLY ADD THE LAST PART OF THE LINK: eg 5sMixHr9YXIZP1tP
-ntfyURL = ''
+ntfyURL = 'NULL'
 # Jellyfin URL, INCLUDE FULL LINK, AS WELL AS CONNECTION TYPE, eg https://
 jellyfinURL = 'NULL'
 # Emby URL, INCLUDE FULL LINK, AS WELL AS CONNECTION TYPE, eg https://
