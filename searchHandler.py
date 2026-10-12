@@ -1,5 +1,5 @@
 import wikipediaapi
-import python-weather
+import python_weather
 import asyncio
 from wikipediaapi._wikipedia import wikipedia
 
@@ -17,4 +17,7 @@ def sortSearch(query):
 
 def weather():
     location = zenithConfig.usrLocation
-    async def main() -> none
+    async def main() -> None:
+        async with python_weather.Client(unit=python_weather.METRIC) as client:
+            weather = await client.get(zenithConfig.city)
+            return("Today in " +zenithConfig.city + "it is " + weather.temperature)

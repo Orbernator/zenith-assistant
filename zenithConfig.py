@@ -4,6 +4,7 @@ userName = 'User'
 
 inputMethod = 'text'
 searchEngine = 'google'
+my_city = 'Sydney'
 
 ## Keys and URLS
 

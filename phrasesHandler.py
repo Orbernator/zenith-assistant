@@ -2,7 +2,7 @@ import zenithConfig
 import random as rnd
 
 def greetings():
-    greetrnd = rnd.randint(1, 6):
+    greetrnd = rnd.randint(1, 6)
     if greetrnd == 1:
         return('Hello, ' + zenithConfig.userName + ', how are you?')
     elif greetrnd == 2:

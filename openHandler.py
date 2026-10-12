@@ -1,4 +1,4 @@
-in import webbrowser
+import webbrowser
 import zenithConfig
 def openSort(query):
     if 'youtube' in query:
@@ -191,7 +191,7 @@ def openSort(query):
             return('Mastodon Opened')
         else:
             return('Social Media is disabled, please check your config.')
-    elif 'bluesky' or 'bsky' in query:
+    elif any(word in query for word in ['bluesky', 'bsky']):
         if zenithConfig.noSocialMedia == False:
             webbrowser.open_new_tab('https://bsky.app')
             return('Bluesky Opened')
@@ -221,19 +221,19 @@ def openSort(query):
     elif 'crazy games' in query:
         webbrowser.open_new_tab('https://crazygames.com')
         return('CrazyGames Opened')
-    elif 'nine news' or '9 news' in query:
+    elif any(word in query for word in ['nine news', '9 news']):
         webbrowser.open_new_tab('https://www.nine.com.au')
         return('Nine News Opened')
-    elif 'nine now' or '9 now' in query:
+    elif any(word in query for word in ['nine now', '9 now']):
         webbrowser.open_new_tab('https://9now.com.au')
         return('Nine Now Opened')
-    elif 'seven news' or '7 news' in query:
+    elif any(word in query for word in ['seven news', '7 news']):
         webbrowser.open_new_tab('https://7news.com.au')
         return('Seven News Opened')
-    elif 'seven plus' or '7 plus' in query:
+    elif any(word in query for word in ['seven plus', '7 plus']):
         webbrowser.open_new_tab('https://7plus.com.au')
         return('Seven Plus Opened')
-    elif 'ten news' or '10 news' in query:
+    elif any(word in query for word in ['ten news', '10 news']):
         webbrowser.open_new_tab('https://10.com.au')
         return('Ten News Opened')
     elif 'abc news' in query:
@@ -254,16 +254,16 @@ def openSort(query):
     elif 'stan' in query:
         webbrowser.open_new_tab('https://www.stan.com.au')
         return('Stan Opened')
-    elif 'prime video' or 'amazon prime' or 'amazon prime video' in query:
+    elif any(word in query for word in ['prime video', 'amazon prime', 'amazon prime video']):
         webbrowser.open_new_tab('https://primevideo.com')
         return('Prime Video Opened')
-    elif 'tubi' or 'tubi tv' or 'tubi.tv' in query:
+    elif any(word in query for word in ['tubi', 'tubi tv', 'tubi.tv']):
         webbrowser.open_new_tab('https://www.tubitv.com')
         return('Tubi Opened')
-    elif 'paramount plus' or 'paramount +' or 'paramountplus' in query:
+    elif any(word in query for word in ['paramount plus', 'paramount +', 'paramountplus']):
         webbrowser.open_new_tab('https://www.paramountplus.com')
         return('Paramount Plus Opened')
-    elif 'disney plus' or 'disney +' or 'disneyplus' in query:
+    elif any(word in query for word in ['disney plus', 'disney +', 'disneyplus']):
         webbrowser.open_new_tab('https://www.disneyplus.com')
         return('Disney Plus Opened')
     elif 'hbo max' in query:
@@ -290,10 +290,10 @@ def openSort(query):
         else:
             webbrowser.open_new_tab(zenithConfig.embyURL)
             return('Emby Opened')
-    elif 'britbox' or 'brit box' in query:
+    elif any(word in query for word in ['britbox', 'brit box']):
         webbrowser.open_new_tab('https://britbox.com/')
         return('Britbox Opened')
-    elif 'kayo' or 'kayo sports' in query:
+    elif any(word in query for word in ['kayo', 'kayo sports']):
         webbrowser.open_new_tab('https://kayosports.com.au')
         return('Kayo Opened')
     elif 'binge' in query:
@@ -302,19 +302,19 @@ def openSort(query):
     elif 'hayu' in query:
         webbrowser.open_new_tab('https://hayu.com')
         return('Hayu Opened')
-    elif 'acorn' or 'acorn tv' in query:
+    elif any(word in query for word in ['acorn', 'acorn tv']):
         webbrowser.open_new_tab('https://acorn.tv')
         return('Acorn TV Opened')
     elif 'shudder' in query:
         webbrowser.open_new_tab('https://shudder.com')
         return('Shudder Opened')
-    elif 'dropout' or 'dropout tv' in query:
+    elif any(word in query for word in ['dropout', 'dropout tv']):
         webbrowser.open_new_tab('https://dropout.tv')
         return('Dropout Opened')
-    elif 'nebula' or 'nebula tv' in query:
+    elif any(word in query for word in ['nebula', 'nebula tv']):
         webbrowser.open_new_tab('https://nebula.tv')
         return('Nebula Opened')
-    elif 'amc' or 'amc plus' or 'amc +' in query:
+    elif any(word in query for word in ['amc', 'amc plus', 'amc +']):
         webbrowser.open_new_tab('https://amcplus.com')
         return('AMC Plus Opened')
     elif 'plex' in query:
@@ -366,10 +366,10 @@ def openSort(query):
             return('Xbox Opened')
         else:
             return('Desktop App Opening, not yet supported')
-    elif 'playstation' or 'playstation store' in query:
+    elif any(word in query for word in['playstation', 'playstation store']):
         webbrowser.open_new_tab('https://playstation.com')
         return('Playstation Store Opened')
-    elif 'meta quest store' or 'meta quest' in query:
+    elif any(word in query for word in ['meta quest store', 'meta quest']):
         webbrowser.open_new_tab('https://meta.com/en-gb/experiences')
         return('Meta Quest Store Opened')
     elif 'patreon' in query:

@@ -42,15 +42,13 @@ def zenithCommands(query):
     elif 'notify' in query:
         query = query.replace("notify", "")
         talk(ntfy.notifySort(query))
-    elif 'hello' or 'hi' or 'howdie' or 'hiya' in query:
-        phr.greetings()
-    elif 'goodbye' or 'bye' or 'see ya' or 'see you' or 'adios' or 'ciao' in query:
-        phr.goodbyes()
+    elif any(word in query for word in ['hello', 'hi', 'howdie','hiya']):
+        talk(phr.greetings())
+    elif any(word in query for word in ['goodbye', 'bye', 'see ya', 'see you', 'adios', 'ciao', 'exit', 'quit', 'terminate', 'end task', 'end program']):
+        talk(phr.goodbyes())
         exit()
-    elif 'weather' or 'forecast' or 'whats it going to be today' or 'whats the weather' or 'whats the forecast' or 'add weather related thing here' in query:
-        srch.weather()
-    elif 'exit' or 'quit' or 'terminate' or 'end task' in query:
-        exit()
+    elif any(word in query for word in ['weather', 'forecast', "what's it going to be today", "what's the weather", "what's the forecast"]):
+        talk(srch.weather())
     else:
         talk('Sorry, I dont recognize that command')
 
