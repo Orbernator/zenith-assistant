@@ -11,7 +11,7 @@ You can support me at the following links:
 
 ### Things that Zenith can do
 
-- Open websites
+- Open websites (Wanna see which ones? [Click Here](Sites.md))
 - Check the Weather
 - Send you notfications
 - Check the time

@@ -279,10 +279,10 @@ def openSort(query):
         webbrowser.open_new_tab('https://dazn.com')
         return('DAZN Opened')
     elif 'jellyfin' in query:
-        if zenithConfig.jellyfinAddress == 'NULL':
+        if zenithConfig.jellyfinURL == 'NULL':
             return('Jellyfin is not configured')
         else:
-            webbrowser.open_new_tab(zenithConfig.jellyfinAddress)
+            webbrowser.open_new_tab(zenithConfig.jellyfinURL)
             return('JellyFin Opened')
     elif 'emby' in query:
         if zenithConfig.embyURL == 'NULL':
@@ -342,13 +342,13 @@ def openSort(query):
     elif 'qobuz' in query:
         webbrowser.open_new_tab('https://qobuz.com')
         return('Qobuz Opened')
-    elif 'SiriusXM' in query:
+    elif 'siriusxm' in query:
         webbrowser.open_new_tab('https://siriusxm.com')
         return('SiriusXM Opened')
-    elif 'SoundCloud' in query:
+    elif 'soundcloud' in query:
         webbrowser.open_new_tab('https://soundcloud.com')
         return('SoundCloud Opened')
-    elif 'music.stingray.com' in query:
+    elif 'stingray' in query:
         webbrowser.open_new_tab('https://music.stingray.com')
         return('Stingray Opened')
     elif 'tidal' in query:
@@ -382,7 +382,7 @@ def openSort(query):
         webbrowser.open_new_tab('https://grokipedia.com')
         return('Grokipedia Opened')
     elif 'protected text' in query:
-        webbrowser.open_new_tab('https://protectedtext.com/' + zenithConfig.protextedTextURL)
+        webbrowser.open_new_tab('https://protectedtext.com/' + zenithConfig.protectedTextURL)
         return('Protected Text Opened')
     else:
         return('Command not Found')
