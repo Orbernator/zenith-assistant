@@ -18,6 +18,13 @@ You can support me at the following links:
 - Say Hello and Goodbye!
 - And more to come!
 
+### How to Install Zenith
+
+To install Zenith, you can either run the Zenith.py file, or just Download the Zenith file from the Releases!
+Zenith can currently be configured using the zenithConfig.py file, which will be replaced in a upcoming update with in app settings, or a config file.
+
+Documentation will be released soon on what commands Zenith knows. (Yes, another whole website)
+
 ### What is Planned
 
 - Send notifications over: Telegram, Matrix, Email
