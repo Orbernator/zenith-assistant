@@ -24,7 +24,7 @@ def greetings():
         return('A Fatal Error Occurred. Error Code 0001')
 
 def goodbyes():
-    byernd = rnd.randint(1,6)
+    byernd = rnd.randint(1,5)
     if byernd == 1:
         return('See you later!')
     elif byernd == 2:
@@ -35,4 +35,16 @@ def goodbyes():
         return('Going so soon? Bye then!')
     elif byernd == 5:
         return('Adios Amigo!')
-    
+    else:
+        return('A Fatal Error Occurred. Error Code 0002')
+
+def sup():
+    suprnd = rnd.randint(1,4)
+    if suprnd == 1:
+        return('Nothing Much, what about you?')
+    elif suprnd == 2:
+        return('A lot of things actually, too many to list!')
+    elif suprnd == 3:
+        return('The Sky!')
+    elif suprnd == 4:
+        return('Well, so many things are going on, what do you want to know about?')

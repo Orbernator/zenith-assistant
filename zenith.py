@@ -1,4 +1,3 @@
-import speech_recognition as sr
 import pyttsx3
 import datetime
 import zenithConfig
@@ -49,6 +48,8 @@ def zenithCommands(query):
         exit()
     elif any(word in query for word in ['weather', 'forecast', "what's it going to be today", "what's the weather", "what's the forecast"]):
         talk(srch.weather())
+    elif any(word in query for word in ["what's happening", "whats's going on", "how's it going", "wassup", 'sup']):
+        talk(phr.sup())
     else:
         talk('Sorry, I dont recognize that command')
 
